@@ -2,10 +2,15 @@ const start = document.querySelector('#start');
 const end = document.querySelector('#end');
 const result = document.querySelector('#result');
 const btn_plus = document.querySelector('#btn-plus');
-
+const btn_clear = document.querySelector('#clear');
 var totalHours = 0;
 var totalMinute = 0;
 
+btn_clear.addEventListener('click', (event) => {
+    totalHours = 0
+    totalMinute = 0
+    result.innerHTML = `0`
+})
 btn_plus.addEventListener('click', (event) => {
     const  textStart = start.value.split('');
     const textStartHours = textStart.splice(0, 2).join('');
